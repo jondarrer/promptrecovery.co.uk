@@ -4,7 +4,7 @@ Site for <https://promptrecovery.co.uk> written in GitHub Pages [Jekyll](https:/
 
 ## Logo
 
-![Prompt Recovery Logo](./assets/images/promp-recovery-logo-3-1024x1024.png)
+![Prompt Recovery Logo](./assets/images/promptrecovery-logo-3-1024x1024.png)
 
 ### Logo colours
 

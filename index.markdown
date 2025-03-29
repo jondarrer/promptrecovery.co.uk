@@ -5,7 +5,7 @@
 layout: home
 ---
 
-<img src="/assets/images/promp-recovery-logo-3.png" style="width: 50%">
+<img src="/assets/images/promptrecovery-logo-3-1024x1024.png" style="width: 50%">
 
 <p><a href="mailto:nick@promptrecovery.co.uk">nick@promptrecovery.co.uk</a></p>
 
