@@ -1,30 +1,46 @@
-<footer class="site-footer h-card">
-  <data class="u-url" href="{{ '/' | relative_url }}"></data>
+<footer id="site-footer" class="dark:bg-line-blue-600" role="contentinfo">
+  <div class="footer-bg">
+    <div class="footer-top">
+      <div class="row px-12 py-6">
+        <div class="grid grid-cols-1 lg:grid-cols-7 gap-4">
+          <div class="col-span-2 py-6">
+            <h3 class="font-bold text-4xl lg:text-3xl xl:text-4xl">
+              Prompt Recovery Ltd
+            </h3>
+            <p class="text-lg mt-6">
+              Rapid Response,<br />
+              Reliable Recovery
+            </p>
+          </div>
 
-  <div class="wrapper">
+          <div class="col-span-3 py-6">
+            <!-- https://stackoverflow.com/questions/23776767/wrapping-long-email-addresses-in-small-boxes -->
+            <h3 class="font-bold text-4xl lg:text-3xl xl:text-4xl">
+              <a href="mailto:nick@promptrecovery.co.uk"
+                >nick@&#8203;promptrecovery&#8203;.co.uk</a
+              >
+            </h3>
+            <p class="text-lg mt-6">Mon–Fri 8am–8pm</p>
+          </div>
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col">
-      {%- if site.author %}
-        <ul class="contact-list">
-          {% if site.author.name -%}
-            <li class="p-name">{{ site.author.name | escape }}</li>
-          {% endif -%}
-          {% if site.author.email -%}
-            <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-          {%- endif %}
-        </ul>
-      {%- endif %}
+          <div class="col-span-2 py-6">
+            <h3 class="font-bold text-4xl lg:text-3xl xl:text-4xl">
+              <a href="tel:07799525650">07799 52 56 50</a>
+            </h3>
+            <p class="text-lg mt-6">WhatsApp or Call</p>
+          </div>
+        </div>
       </div>
-      <div class="footer-col">
-        <p>{{ site.description | escape }}</p>
-      </div>
+      <div class="footer-top-underline"></div>
     </div>
 
-    <div class="social-links">
-      {%- include social.html -%}
+    <div class="justify-self-center">
+      <p class="mb-1 text-company-name-dark-blue-600 dark:text-white">
+        Copyright ©2025 All rights reserved.
+      </p>
+      <!-- .footer-copyright -->
     </div>
-
+    <!-- .footer-bottom  -->
   </div>
-
 </footer>
+<!-- #site-footer -->

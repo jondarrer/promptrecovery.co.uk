@@ -28,13 +28,14 @@ url: "https://promptrecovery.co.uk" # the base hostname & protocol for your site
 google_site_verification:
 logo: /assets/images/promptrecovery-logo-3-600x600.png
 locale: en_GB
+timezone: Europe/London
 twitter_username: promptrecoveryuk
 github_username: jondarrer
 repository: jondarrer/promptrecovery.co.uk
 
 # Build settings
-theme: minima
 plugins:
+  - jekyll-seo-tag
   - jekyll-feed
 
 defaults:
@@ -65,3 +66,9 @@ defaults:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+exclude:
+  - package.json
+  - postcss.config.js
+  - tailwind.config.js
+  - yarn.lock

@@ -1,0 +1,136 @@
+<!-- component -->
+<!-- https://www.creative-tim.com/twcomponents/component/navbar-header -->
+<nav class="px-2 sm:px-4 py-2.5">
+  <div class="container flex flex-wrap justify-between items-center mx-auto">
+    <a href="/" class="flex items-center">
+      <span
+        class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
+      >
+        Prompt Recovery Ltd
+      </span>
+    </a>
+
+    <div class="flex items-center">
+      <button
+        id="menu-toggle"
+        type="button"
+        class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 md:hidden"
+      >
+        <span class="sr-only">Open main menu</span>
+        <!-- Hamburger icon -->
+        <svg
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <div class="w-full md:block md:w-auto hidden" id="mobile-menu">
+      <ul
+        class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium"
+      >
+        <li>
+          <a
+            href="#"
+            class="block py-2 pr-4 pl-3 text-company-name-dark-blue-500 rounded md:bg-transparent md:p-0 dark:text-white"
+            aria-current="page"
+          >
+            Home
+          </a>
+        </li>
+        <!--<li>
+          <a
+            href="#"
+            class="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+          >
+            About
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+          >
+            Services
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+          >
+            Pricing
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+          >
+            Contact
+          </a>
+        </li>-->
+      </ul>
+    </div>
+
+    <!--<div class="flex flex-col justify-center ml-3">
+      <input type="checkbox" name="light-switch" class="light-switch sr-only" />
+      <label class="relative cursor-pointer p-2" for="light-switch">
+        <svg
+          class="dark:hidden"
+          width="16"
+          height="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            class="fill-slate-300"
+            d="M7 0h2v2H7zM12.88 1.637l1.414 1.415-1.415 1.413-1.413-1.414zM14 7h2v2h-2zM12.95 14.433l-1.414-1.413 1.413-1.415 1.415 1.414zM7 14h2v2H7zM2.98 14.364l-1.413-1.415 1.414-1.414 1.414 1.415zM0 7h2v2H0zM3.05 1.706 4.463 3.12 3.05 4.535 1.636 3.12z"
+          />
+          <path
+            class="fill-slate-400"
+            d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4Z"
+          />
+        </svg>
+        <svg
+          class="hidden dark:block"
+          width="16"
+          height="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            class="fill-slate-400"
+            d="M6.2 1C3.2 1.8 1 4.6 1 7.9 1 11.8 4.2 15 8.1 15c3.3 0 6-2.2 6.9-5.2C9.7 11.2 4.8 6.3 6.2 1Z"
+          />
+          <path
+            class="fill-slate-500"
+            d="M12.5 5a.625.625 0 0 1-.625-.625 1.252 1.252 0 0 0-1.25-1.25.625.625 0 1 1 0-1.25 1.252 1.252 0 0 0 1.25-1.25.625.625 0 1 1 1.25 0c.001.69.56 1.249 1.25 1.25a.625.625 0 1 1 0 1.25c-.69.001-1.249.56-1.25 1.25A.625.625 0 0 1 12.5 5Z"
+          />
+        </svg>
+        <span class="sr-only">Switch to light / dark version</span>
+      </label>
+    </div>-->
+  </div>
+</nav>
+
+<script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuToggle.addEventListener("click", function () {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+
+{%- for path in include.paths -%} {%- assign hyperpage = site.pages | where:
+"path", path | first -%} {%- if hyperpage.title %}
+<!--<a class="nav-item" href="{{ hyperpage.url | relative_url }}">{{ hyperpage.title | escape }}</a>-->
+{%- endif -%} {%- endfor -%}

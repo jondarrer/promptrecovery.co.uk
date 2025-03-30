@@ -1,0 +1,44 @@
+@theme {
+  --color-vehicle-green-100: oklch(0.90 0.11 158.9);
+  --color-vehicle-green-200: oklch(0.75 0.11 158.9);
+  --color-vehicle-green-300: oklch(0.60 0.11 158.9);
+  --color-vehicle-green-400: oklch(0.50 0.11 158.9);
+  --color-vehicle-green-500: oklch(0.48 0.11 158.9); /* base #066f46 */
+  --color-vehicle-green-600: oklch(0.35 0.11 158.9);
+
+  --color-line-blue-100: oklch(0.90 0.09 230.1);
+  --color-line-blue-200: oklch(0.75 0.09 230.1);
+  --color-line-blue-300: oklch(0.60 0.09 230.1);
+  --color-line-blue-400: oklch(0.50 0.09 230.1);
+  --color-line-blue-500: oklch(0.46 0.09 230.1); /* base #0a5f7e */
+  --color-line-blue-600: oklch(0.35 0.09 230.1);
+
+  --color-company-name-dark-blue-100: oklch(0.90 0.07 234.3);
+  --color-company-name-dark-blue-200: oklch(0.75 0.07 234.3);
+  --color-company-name-dark-blue-300: oklch(0.60 0.07 234.3);
+  --color-company-name-dark-blue-400: oklch(0.50 0.07 234.3);
+  --color-company-name-dark-blue-500: oklch(0.33 0.07 234.3); /* base #053b53 */
+  --color-company-name-dark-blue-600: oklch(0.35 0.07 234.3);
+
+  --color-tag-line-turquoise-100: oklch(0.90 0.09 230.6);
+  --color-tag-line-turquoise-200: oklch(0.75 0.09 230.6);
+  --color-tag-line-turquoise-300: oklch(0.60 0.09 230.6);
+  --color-tag-line-turquoise-400: oklch(0.50 0.09 230.6);
+  --color-tag-line-turquoise-500: oklch(0.50 0.09 230.6); /* base #1b6c8d */
+  --color-tag-line-turquoise-600: oklch(0.35 0.09 230.6);
+
+  --color-logo-light-blue-100: oklch(0.90 0.04 240.5);
+  --color-logo-light-blue-200: oklch(0.75 0.04 240.5);
+  --color-logo-light-blue-300: oklch(0.60 0.04 240.5);
+  --color-logo-light-blue-400: oklch(0.50 0.04 240.5);
+  --color-logo-light-blue-500: oklch(0.86 0.04 240.5); /* base #b8d4e9 */
+  --color-logo-light-blue-600: oklch(0.35 0.04 240.5);
+}
+
+.background-overlay {
+  background-image: url(/assets/wp-content/uploads/2023/03/i4thbgt4.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
