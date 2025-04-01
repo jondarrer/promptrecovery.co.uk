@@ -1,4 +1,8 @@
 @theme {
+  --font-sans: "DIN Condensed", "Outfit", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
   --color-vehicle-green-100: oklch(0.90 0.11 158.9);
   --color-vehicle-green-200: oklch(0.75 0.11 158.9);
   --color-vehicle-green-300: oklch(0.60 0.11 158.9);
@@ -41,4 +45,52 @@
   background-repeat: no-repeat;
   background-size: cover;
   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
+.background-overlay-grid-system {
+  background-image: url(/assets/wp-content/uploads/2023/03/4tg4tf.png);
+  background-position: 100% 40%;
+  background-repeat: repeat;
+  background-size: 35% auto;
+  transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
+@font-face {
+  font-family: "DIN Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("/assets/fonts/DIN-Condensed-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("/assets/fonts/Outfit-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-display: block;
+  src: url("/assets/fonts/Outfit-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+  src: url("/assets/fonts/Outfit-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url("/assets/fonts/Outfit-700.woff2") format("woff2");
 }
