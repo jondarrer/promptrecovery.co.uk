@@ -837,6 +837,16 @@
       grid-template-columns: repeat(7, minmax(0, 1fr));
     }
   }
+  .lg\:justify-self-center {
+    @media (width >= 64rem) {
+      justify-self: center;
+    }
+  }
+  .lg\:justify-self-end {
+    @media (width >= 64rem) {
+      justify-self: flex-end;
+    }
+  }
   .lg\:px-8 {
     @media (width >= 64rem) {
       padding-inline: calc(var(--spacing) * 8);

@@ -29,4 +29,15 @@ endcomment %}
       });
     });
   }
+
+  document.querySelectorAll('label[for]').forEach((label) => {
+    label.addEventListener('keydown', (e) => {
+      if (e.code === 'Space' || e.key === ' ') {
+        e.preventDefault();
+        const id = label.getAttribute('for');
+        const input = document.getElementById(id);
+        if (input) input.click();
+      }
+    });
+  });
 </script>
