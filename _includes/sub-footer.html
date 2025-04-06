@@ -6,13 +6,9 @@ endcomment %}
 
 <script>
   const lightSwitches = document.querySelectorAll('.light-switch');
-  console.log('Hello');
   if (lightSwitches.length > 0) {
-    console.log('In if');
     lightSwitches.forEach((lightSwitch, i) => {
-      console.log('In for', i);
       if (localStorage.getItem('dark-mode') === 'true') {
-        console.log('Local dark', i);
         lightSwitch.checked = true;
       }
       lightSwitch.addEventListener('change', () => {
