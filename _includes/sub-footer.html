@@ -1,19 +1,22 @@
 {% comment %} Use this to insert markup before the closing body tag. For
 example, scripts that need to be executed after the document has finished
-loading. {% endcomment %}
-
-{% comment %}
-https://cruip.com/implementing-tailwind-css-dark-mode-toggle-with-no-flicker/
-{% endcomment %}
+loading. {% endcomment %} {% comment %}
+https://cruip.com/implementing-tailwind-css-dark-mode-toggle-with-no-flicker/ {%
+endcomment %}
 
 <script>
   const lightSwitches = document.querySelectorAll('.light-switch');
+  console.log('Hello');
   if (lightSwitches.length > 0) {
+    console.log('In if');
     lightSwitches.forEach((lightSwitch, i) => {
+      console.log('In for', i);
       if (localStorage.getItem('dark-mode') === 'true') {
+        console.log('Local dark', i);
         lightSwitch.checked = true;
       }
       lightSwitch.addEventListener('change', () => {
+        console.log('changed!');
         const { checked } = lightSwitch;
         lightSwitches.forEach((el, n) => {
           if (n !== i) {
@@ -30,4 +33,4 @@ https://cruip.com/implementing-tailwind-css-dark-mode-toggle-with-no-flicker/
       });
     });
   }
-  </script>
+</script>

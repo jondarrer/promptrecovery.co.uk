@@ -1,4 +1,18 @@
 {
+  "files.exclude": {
+    "_site": true,
+    ".jekyll-cache": true
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  "[yaml]": {
+    "editor.formatOnSave": false
+  },
+  "browser-preview.startUrl": "http://local.promptrecovery.co.uk:4000",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "workbench.colorCustomizations": {
     "activityBar.activeBackground": "#099f65",
     "activityBar.background": "#099f65",

@@ -22,9 +22,10 @@ title: Prompt Recovery Ltd
 email: nick@promptrecovery.co.uk
 tagline: Rapid Response, Prompt Recovery
 description: >- # this means to ignore newlines until "baseurl:"
-  Prompt Recovery provides a rapid and reliable recovery service in and around Watford.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://promptrecovery.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
+  Prompt Recovery provides a rapid and reliable recovery service in and around
+  Watford.
+baseurl: '' # the subpath of your site, e.g. /blog
+url: 'https://promptrecovery.co.uk' # the base hostname & protocol for your site, e.g. http://example.com
 google_site_verification:
 logo: /assets/images/promptrecovery-logo-3-600x600.png
 locale: en_GB
@@ -40,7 +41,7 @@ plugins:
 
 defaults:
   - scope:
-      path: ""
+      path: ''
     values:
       image:
         path: /assets/images/promptrecovery-logo-3-100x100.png
