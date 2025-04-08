@@ -42,14 +42,6 @@
       '; path=/; SameSite=Lax';
   }
 
-  // Utility function to get a cookie
-  function getCookie(name) {
-    return document.cookie
-      .split('; ')
-      .find((row) => row.startsWith(name + '='))
-      ?.split('=')[1];
-  }
-
   // On page load
   window.addEventListener('DOMContentLoaded', () => {
     const banner = document.getElementById('cookie-banner');
@@ -58,6 +50,9 @@
     // Show banner if consent cookie doesn't exist
     if (!getCookie('cookie_consent')) {
       banner.classList.remove('hidden');
+    } else {
+      loadGoogleAnalytics();
+      loadTrustpilot();
     }
 
     // Handle Accept button
@@ -65,9 +60,8 @@
       setCookie('cookie_consent', 'true', 180); // Store for 180 days
       banner.classList.add('hidden');
 
-      // OPTIONAL: Load scripts now that consent is given
-      // loadGoogleAnalytics();
-      // loadTrustpilot();
+      loadGoogleAnalytics();
+      loadTrustpilot();
     });
   });
 </script>

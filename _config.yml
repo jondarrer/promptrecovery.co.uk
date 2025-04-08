@@ -26,6 +26,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Watford.
 baseurl: '' # the subpath of your site, e.g. /blog
 url: 'https://promptrecovery.co.uk' # the base hostname & protocol for your site, e.g. http://example.com
+google_analytics: G-CQ8R13D8MN
 google_site_verification:
 logo: /assets/images/promptrecovery-logo-3-600x600.png
 locale: en_GB
