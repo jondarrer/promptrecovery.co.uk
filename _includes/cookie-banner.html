@@ -1,0 +1,73 @@
+<section
+  id="cookie-banner"
+  class="dark:bg-vehicle-green-500 fixed bottom-0 hidden w-full bg-gray-50"
+>
+  <div
+    class="container mx-auto max-w-6xl px-4 py-8 lg:flex lg:items-center lg:gap-x-16"
+  >
+    <p class="text-company-name-dark-blue-500 dark:text-gray-300">
+      By clicking “Accept All Cookies”, you agree to the storing of cookies on
+      your device to enhance site navigation, analyze site usage, and assist in
+      our marketing efforts.
+    </p>
+
+    <div class="mt-6 flex shrink-0 items-center gap-x-4 lg:mt-0 lg:gap-x-8">
+      <a
+        href="/cookie-policy"
+        class="hover:text-company-name-dark-blue-500 w-1/2 text-sm text-gray-800 underline transition-colors duration-300 focus:outline-none md:w-auto dark:text-white dark:hover:text-gray-400"
+      >
+        Our Cookie Policy
+      </a>
+
+      <button
+        id="accept-cookies"
+        class="bg-vehicle-green-500 dark:text-vehicle-green-500 w-1/2 rounded-lg px-4 py-2.5 text-sm font-medium text-white transition-colors duration-300 hover:bg-gray-900/80 focus:outline-none md:w-auto dark:bg-white"
+      >
+        Accept All Cookies
+      </button>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Utility function to set a cookie
+  function setCookie(name, value, days) {
+    const expires = new Date(Date.now() + days * 864e5).toUTCString();
+    document.cookie =
+      name +
+      '=' +
+      encodeURIComponent(value) +
+      '; expires=' +
+      expires +
+      '; path=/; SameSite=Lax';
+  }
+
+  // Utility function to get a cookie
+  function getCookie(name) {
+    return document.cookie
+      .split('; ')
+      .find((row) => row.startsWith(name + '='))
+      ?.split('=')[1];
+  }
+
+  // On page load
+  window.addEventListener('DOMContentLoaded', () => {
+    const banner = document.getElementById('cookie-banner');
+    const acceptBtn = document.getElementById('accept-cookies');
+
+    // Show banner if consent cookie doesn't exist
+    if (!getCookie('cookie_consent')) {
+      banner.classList.remove('hidden');
+    }
+
+    // Handle Accept button
+    acceptBtn.addEventListener('click', () => {
+      setCookie('cookie_consent', 'true', 180); // Store for 180 days
+      banner.classList.add('hidden');
+
+      // OPTIONAL: Load scripts now that consent is given
+      // loadGoogleAnalytics();
+      // loadTrustpilot();
+    });
+  });
+</script>

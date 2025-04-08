@@ -43,6 +43,10 @@
   --color-logo-light-blue-600: oklch(0.35 0.04 240.5);
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .background-overlay {
   background-image: url(/assets/wp-content/uploads/2023/03/i4thbgt4.png);
   background-position: center center;

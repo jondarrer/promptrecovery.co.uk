@@ -11,10 +11,13 @@
     --color-gray-50: oklch(0.985 0.002 247.839);
     --color-gray-100: oklch(0.967 0.003 264.542);
     --color-gray-200: oklch(0.928 0.006 264.531);
+    --color-gray-300: oklch(0.872 0.01 258.338);
     --color-gray-400: oklch(0.707 0.022 261.325);
     --color-gray-500: oklch(0.551 0.027 264.364);
     --color-gray-600: oklch(0.446 0.03 256.802);
     --color-gray-700: oklch(0.373 0.034 259.733);
+    --color-gray-800: oklch(0.278 0.033 256.848);
+    --color-gray-900: oklch(0.21 0.034 264.665);
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-xl: 36rem;
@@ -39,12 +42,15 @@
     --font-weight-extrabold: 800;
     --tracking-tight: -0.025em;
     --tracking-wide: 0.025em;
+    --radius-lg: 0.5rem;
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-vehicle-green-400: oklch(0.5 0.11 158.9);
     --color-vehicle-green-500: oklch(0.48 0.11 158.9);
+    --color-vehicle-green-600: oklch(0.35 0.11 158.9);
     --color-line-blue-600: oklch(0.35 0.09 230.1);
     --color-company-name-dark-blue-300: oklch(0.6 0.07 234.3);
     --color-company-name-dark-blue-500: oklch(0.33 0.07 234.3);
@@ -278,6 +284,9 @@
   .static {
     position: static;
   }
+  .bottom-0 {
+    bottom: calc(var(--spacing) * 0);
+  }
   .col-span-2 {
     grid-column: span 2 / span 2;
   }
@@ -329,11 +338,20 @@
   .mb-1 {
     margin-bottom: calc(var(--spacing) * 1);
   }
+  .mb-2 {
+    margin-bottom: calc(var(--spacing) * 2);
+  }
   .mb-3 {
     margin-bottom: calc(var(--spacing) * 3);
   }
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
   .mb-5 {
     margin-bottom: calc(var(--spacing) * 5);
+  }
+  .mb-6 {
+    margin-bottom: calc(var(--spacing) * 6);
   }
   .ml-3 {
     margin-left: calc(var(--spacing) * 3);
@@ -368,6 +386,9 @@
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
+  .w-1\/2 {
+    width: calc(1/2 * 100%);
+  }
   .w-4\/5 {
     width: calc(4/5 * 100%);
   }
@@ -392,6 +413,9 @@
   .max-w-xl {
     max-width: var(--container-xl);
   }
+  .shrink-0 {
+    flex-shrink: 0;
+  }
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
   }
@@ -400,6 +424,12 @@
   }
   .resize {
     resize: both;
+  }
+  .list-inside {
+    list-style-position: inside;
+  }
+  .list-disc {
+    list-style-type: disc;
   }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -431,6 +461,10 @@
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
+  .gap-x-4 {
+    -moz-column-gap: calc(var(--spacing) * 4);
+         column-gap: calc(var(--spacing) * 4);
+  }
   .self-center {
     align-self: center;
   }
@@ -443,12 +477,21 @@
   .rounded {
     border-radius: 0.25rem;
   }
+  .rounded-lg {
+    border-radius: var(--radius-lg);
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
   .border-gray-400 {
     border-color: var(--color-gray-400);
+  }
+  .bg-gray-50 {
+    background-color: var(--color-gray-50);
+  }
+  .bg-gray-900 {
+    background-color: var(--color-gray-900);
   }
   .bg-logo-light-blue-500 {
     background-color: var(--color-logo-light-blue-500);
@@ -489,6 +532,9 @@
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
   }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
   }
@@ -515,6 +561,9 @@
   }
   .py-20 {
     padding-block: calc(var(--spacing) * 20);
+  }
+  .pt-3 {
+    padding-top: calc(var(--spacing) * 3);
   }
   .pt-10 {
     padding-top: calc(var(--spacing) * 10);
@@ -600,8 +649,20 @@
   .text-gray-700 {
     color: var(--color-gray-700);
   }
+  .text-gray-800 {
+    color: var(--color-gray-800);
+  }
   .text-logo-light-blue-300 {
     color: var(--color-logo-light-blue-300);
+  }
+  .text-vehicle-green-400 {
+    color: var(--color-vehicle-green-400);
+  }
+  .text-vehicle-green-500 {
+    color: var(--color-vehicle-green-500);
+  }
+  .text-vehicle-green-600 {
+    color: var(--color-vehicle-green-600);
   }
   .text-white {
     color: var(--color-white);
@@ -616,6 +677,11 @@
   }
   .transition-all {
     transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .transition-colors {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
@@ -641,6 +707,13 @@
       }
     }
   }
+  .hover\:bg-gray-900\/80 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: color-mix(in oklab, var(--color-gray-900) 80%, transparent);
+      }
+    }
+  }
   .hover\:bg-indigo-500 {
     &:hover {
       @media (hover: hover) {
@@ -652,6 +725,20 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-logo-light-blue-500);
+      }
+    }
+  }
+  .hover\:text-company-name-dark-blue-500 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-company-name-dark-blue-500);
+      }
+    }
+  }
+  .hover\:text-gray-600 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-gray-600);
       }
     }
   }
@@ -832,9 +919,36 @@
       grid-column: span 2 / span 2;
     }
   }
+  .lg\:mt-0 {
+    @media (width >= 64rem) {
+      margin-top: calc(var(--spacing) * 0);
+    }
+  }
+  .lg\:flex {
+    @media (width >= 64rem) {
+      display: flex;
+    }
+  }
   .lg\:grid-cols-7 {
     @media (width >= 64rem) {
       grid-template-columns: repeat(7, minmax(0, 1fr));
+    }
+  }
+  .lg\:items-center {
+    @media (width >= 64rem) {
+      align-items: center;
+    }
+  }
+  .lg\:gap-x-8 {
+    @media (width >= 64rem) {
+      -moz-column-gap: calc(var(--spacing) * 8);
+           column-gap: calc(var(--spacing) * 8);
+    }
+  }
+  .lg\:gap-x-16 {
+    @media (width >= 64rem) {
+      -moz-column-gap: calc(var(--spacing) * 16);
+           column-gap: calc(var(--spacing) * 16);
     }
   }
   .lg\:justify-self-center {
@@ -890,6 +1004,11 @@
       background-color: var(--color-company-name-dark-blue-500);
     }
   }
+  .dark\:bg-gray-800 {
+    &:where(.dark, .dark *) {
+      background-color: var(--color-gray-800);
+    }
+  }
   .dark\:bg-line-blue-600 {
     &:where(.dark, .dark *) {
       background-color: var(--color-line-blue-600);
@@ -900,14 +1019,34 @@
       background-color: var(--color-logo-light-blue-200);
     }
   }
+  .dark\:bg-vehicle-green-500 {
+    &:where(.dark, .dark *) {
+      background-color: var(--color-vehicle-green-500);
+    }
+  }
+  .dark\:bg-white {
+    &:where(.dark, .dark *) {
+      background-color: var(--color-white);
+    }
+  }
   .dark\:text-company-name-dark-blue-500 {
     &:where(.dark, .dark *) {
       color: var(--color-company-name-dark-blue-500);
     }
   }
+  .dark\:text-gray-300 {
+    &:where(.dark, .dark *) {
+      color: var(--color-gray-300);
+    }
+  }
   .dark\:text-gray-400 {
     &:where(.dark, .dark *) {
       color: var(--color-gray-400);
+    }
+  }
+  .dark\:text-vehicle-green-500 {
+    &:where(.dark, .dark *) {
+      color: var(--color-vehicle-green-500);
     }
   }
   .dark\:text-white {
@@ -920,6 +1059,15 @@
       &:hover {
         @media (hover: hover) {
           background-color: var(--color-gray-700);
+        }
+      }
+    }
+  }
+  .dark\:hover\:text-gray-400 {
+    &:where(.dark, .dark *) {
+      &:hover {
+        @media (hover: hover) {
+          color: var(--color-gray-400);
         }
       }
     }
@@ -962,6 +1110,9 @@
       }
     }
   }
+}
+button:hover {
+  cursor: pointer;
 }
 .background-overlay {
   background-image: url(/assets/wp-content/uploads/2023/03/i4thbgt4.png);
