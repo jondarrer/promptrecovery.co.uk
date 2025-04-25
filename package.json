@@ -1,36 +1,46 @@
 {
-  "name": "promptrecovery.co.uk-1",
-  "version": "1.0.0",
-  "description": "Site for <https://promptrecovery.co.uk> written in GitHub Pages [Jekyll](https://jekyllrb.com/).",
-  "type": "commonjs",
-  "devDependencies": {
-    "@tailwindcss/cli": "^4.0.17",
-    "@tailwindcss/postcss": "^4.0.17",
-    "autoprefixer": "^10.4.21",
-    "cssnano": "^7.0.6",
-    "culori": "^4.0.1",
-    "npm-run-all": "^4.1.5",
-    "postcss": "^8.5.3",
-    "postcss-cli": "^11.0.1",
-    "postcss-import": "^16.1.0",
-    "prettier": "^3.5.3",
-    "prettier-plugin-tailwindcss": "^0.6.11",
-    "tailwindcss": "^4.0.17"
+  "homepage": "https://promptrecovery.co.uk",
+  "name": "prompt-recovery",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "gh-pages": "^6.3.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.5.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "jekyll": "bundle exec jekyll serve",
-    "postcss": "postcss ./assets/css/main.css --output ./assets/css/styles.css --watch",
-    "start": "TAILWIND_MODE=watch NODE_ENV=development npm-run-all --parallel jekyll postcss",
-    "generate-oklch-theme": "node scripts/generate-oklch-theme.js"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jondarrer/promptrecovery.co.uk.git"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "author": "Jonathan Darrer <jonny@jondarrer.me.uk>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jondarrer/promptrecovery.co.uk/issues"
-  },
-  "homepage": "https://github.com/jondarrer/promptrecovery.co.uk#readme"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
