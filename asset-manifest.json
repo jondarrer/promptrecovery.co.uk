@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1320867b.css",
+    "main.js": "/static/js/main.778f864e.js",
+    "static/js/453.e07de988.chunk.js": "/static/js/453.e07de988.chunk.js",
+    "static/media/logo.png": "/static/media/logo.0f472b84326be1a8c77a.png",
+    "static/media/recovery-truck.jpg": "/static/media/recovery-truck.6e7107411c9ba5628ab7.jpg",
+    "static/media/image2.jpg": "/static/media/image2.fb67bef5d995d054872f.jpg",
+    "static/media/image1.jpg": "/static/media/image1.3e1e0779be25ecc59d6b.jpg",
+    "static/media/image3.jpg": "/static/media/image3.fa9181671745f9c7e974.jpg",
+    "index.html": "/index.html",
+    "main.1320867b.css.map": "/static/css/main.1320867b.css.map",
+    "main.778f864e.js.map": "/static/js/main.778f864e.js.map",
+    "453.e07de988.chunk.js.map": "/static/js/453.e07de988.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1320867b.css",
+    "static/js/main.778f864e.js"
+  ]
+}
