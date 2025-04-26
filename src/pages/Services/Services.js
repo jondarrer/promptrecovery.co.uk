@@ -51,7 +51,7 @@ function Services() {
     <div className="services-container">
       <div className="services-content">
         <div className="services-intro">
-          <h2>The Services That We Offer</h2>
+          <h1>The Services That We Offer</h1>
           <p>
             We provide safe, fast, and affordable towing for cars and vans that
             can't be driven — whether you're at home, at work, or stuck after a

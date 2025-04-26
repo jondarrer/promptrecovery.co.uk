@@ -1,5 +1,5 @@
 .services-container {
-  padding-top: 120px;
+  padding-top: 160px;
   padding-bottom: 60px;
   max-width: 1200px;
   margin: 0 auto;
@@ -26,9 +26,8 @@
   margin-bottom: 50px;
 }
 
-.services-intro h2 {
+.services-intro h1 {
   font-size: 2.5rem;
-  font-weight: 600;
   margin-bottom: 20px;
   color: #0a192f;
 }
@@ -126,11 +125,7 @@
 }
 
 @media (max-width: 480px) {
-  .services-container {
-    padding-top: 100px;
-  }
-
-  .services-intro h2 {
+  .services-intro h1 {
     font-size: 1.8rem;
   }
 
