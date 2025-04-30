@@ -1,5 +1,5 @@
 import React from "react";
-import "./Services.css";
+import styles from "./services.module.css";
 
 function Services() {
   const services = [
@@ -48,9 +48,9 @@ function Services() {
   ];
 
   return (
-    <div className="services-container">
-      <div className="services-content">
-        <div className="services-intro">
+    <div className={styles["services-container"]}>
+      <div className={styles["services-content"]}>
+        <div className={styles["services-intro"]}>
           <h1>The Services That We Offer</h1>
           <p>
             We provide safe, fast, and affordable towing for cars and vans that
@@ -59,21 +59,21 @@ function Services() {
           </p>
         </div>
 
-        <div className="services-grid">
+        <div className={styles["services-grid"]}>
           {services.map((service) => (
-            <div className="service-card" key={service.id}>
-              <div className="service-icon">{service.icon}</div>
+            <div className={styles["service-card"]} key={service.id}>
+              <div className={styles["service-icon"]}>{service.icon}</div>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
             </div>
           ))}
         </div>
 
-        <div className="services-cta">
-          <div className="cta-question">
+        <div className={styles["services-cta"]}>
+          <div className={styles["cta-question"]}>
             <p>Need Help Right Now?</p>
           </div>
-          <div className="cta-action">
+          <div className={styles["cta-action"]}>
             <a href="tel:07799525650">CALL NOW!</a>
           </div>
         </div>

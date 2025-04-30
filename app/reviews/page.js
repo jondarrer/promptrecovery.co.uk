@@ -1,5 +1,5 @@
 import React from "react";
-import "./Reviews.css";
+import styles from "./reviews.module.css";
 import { FaStar, FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 function Reviews() {
@@ -52,15 +52,15 @@ function Reviews() {
     const stars = [];
     for (let i = 0; i < 5; i++) {
       stars.push(
-        <FaStar key={i} className={i < rating ? "star filled" : "star empty"} />
+        <FaStar key={i} className={i < rating ? [styles["star"], styles["filled"]].join(' ') : [styles["star"], styles["empty"]].join(' ')} />
       );
     }
     return stars;
   };
 
   return (
-    <div className="reviews-page">
-      <div className="reviews-header">
+    <div className={styles["reviews-page"]}>
+      <div className={styles["reviews-header"]}>
         <h1>Customer Reviews</h1>
         <p>
           Don't just take our word for it. Here's what our customers have to say
@@ -68,32 +68,32 @@ function Reviews() {
         </p>
       </div>
 
-      <div className="overall-rating">
-        <div className="rating-number">4.9</div>
-        <div className="rating-stars">{renderStars(5)}</div>
+      <div className={styles["overall-rating"]}>
+        <div className={styles["rating-number"]}>4.9</div>
+        <div className={styles["rating-stars"]}>{renderStars(5)}</div>
         <p>Based on {reviews.length} verified reviews</p>
       </div>
 
-      <div className="reviews-grid">
+      <div className={styles["reviews-grid"]}>
         {reviews.map((review) => (
-          <div key={review.id} className="review-card">
-            <div className="review-header">
+          <div key={review.id} className={styles["review-card"]}>
+            <div className={styles["review-header"]}>
               <h3>{review.name}</h3>
-              <span className="review-date">{review.date}</span>
+              <span className={styles["review-date"]}>{review.date}</span>
             </div>
-            <div className="review-stars">{renderStars(review.rating)}</div>
-            <div className="review-content">
-              <FaQuoteLeft className="quote-icon left" />
+            <div className={styles["review-stars"]}>{renderStars(review.rating)}</div>
+            <div className={styles["review-content"]}>
+              <FaQuoteLeft className={[styles["quote-icon"], styles["left"]].join(' ')} />
               <p>{review.text}</p>
-              <FaQuoteRight className="quote-icon right" />
+              <FaQuoteRight className={[styles["quote-icon"], styles["right"]].join(' ')} />
             </div>
           </div>
         ))}
       </div>
 
-      <div className="reviews-cta">
+      <div className={styles["reviews-cta"]}>
         <h2>Need our services?</h2>
-        <a href="tel:1234567890" className="cta-button">
+        <a href="tel:1234567890" className={styles["cta-button"]}>
           Call Now
         </a>
       </div>
