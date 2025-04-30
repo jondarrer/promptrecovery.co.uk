@@ -1,7 +1,10 @@
+'use client'
+
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+import Image from 'next/image';
 import logo from "../../assets/images/logo.png";
-import "./Navbar.css";
+import styles from "./navbar.module.css";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -54,73 +57,73 @@ function Navbar() {
 
   return (
     <>
-      <div className={`navbar ${isShrunk ? "shrink" : ""}`}>
-        <div className="logo">
-          <Link to="/" onClick={closeMenu}>
-            <img src={logo} alt="Logo" className="logo-image" />
+      <div className={[styles["navbar"],  false ? styles["shrink"] : ""].join(' ')}>
+        <div className={styles["logo"]}>
+          <Link href="/">
+            <Image src={logo} alt="Logo" className={styles["logo-image"]} />
           </Link>
         </div>
 
-        <div className="desktop-menu">
-          <Link className="home-link" to="/" onClick={closeMenu}>
+        <div className={styles["desktop-menu"]}>
+          <Link className={styles["home-link"]} href="/" onClick={closeMenu}>
             Home
           </Link>
-          <Link to="/about" onClick={closeMenu}>
+          <Link href="/about" onClick={closeMenu}>
             About
           </Link>
-          <Link to="/services" onClick={closeMenu}>
+          <Link href="/services" onClick={closeMenu}>
             Services
           </Link>
-          <Link to="/faqs" onClick={closeMenu}>
+          <Link href="/faqs" onClick={closeMenu}>
             FAQ's
           </Link>
-          <Link to="/reviews" onClick={closeMenu}>
+          <Link href="/reviews" onClick={closeMenu}>
             Reviews
           </Link>
-          <Link to="/blog" onClick={closeMenu}>
+          <Link href="/blog" onClick={closeMenu}>
             Blog
           </Link>
         </div>
 
-        <div className="call-button">
+        <div className={styles["call-button"]}>
           <a href={`tel:${phoneNumber}`}>CALL NOW</a>
         </div>
 
         <div
-          className={`burger-button ${isMenuOpen ? "active" : ""}`}
+          className={[styles["burger-button"], isMenuOpen ? styles[ "active"] : ""].join(' ')}
           onClick={toggleMenu}
           ref={burgerRef}
         >
-          <div className="burger-line"></div>
-          <div className="burger-line"></div>
-          <div className="burger-line"></div>
+          <div className={styles["burger-line"]}></div>
+          <div className={styles["burger-line"]}></div>
+          <div className={styles["burger-line"]}></div>
         </div>
       </div>
 
       <div
-        className={`mobile-menu ${isMenuOpen ? "show" : ""}`}
-        style={{ top: isShrunk ? "80px" : "120px" }}
+        className={[styles["mobile-menu"], isMenuOpen ? styles["show"] : ""].join(' ')}
+        style={{ top: false ? "80px" : "120px" }}
         ref={menuRef}
       >
-        <Link className="home-link" to="/" onClick={closeMenu}>
+        <Link className={styles["home-link"]} href="/" onClick={closeMenu}>
           Home
         </Link>
-        <Link to="/about" onClick={closeMenu}>
+        <Link href="/about" onClick={closeMenu}>
           About
         </Link>
-        <Link to="/services" onClick={closeMenu}>
+        <Link href="/services" onClick={closeMenu}>
           Services
         </Link>
-        <Link to="/faqs" onClick={closeMenu}>
+        <Link href="/faqs" onClick={closeMenu}>
           FAQ's
         </Link>
-        <Link to="/reviews" onClick={closeMenu}>
+        <Link href="/reviews" onClick={closeMenu}>
           Reviews
         </Link>
-        <Link to="/blog" onClick={closeMenu}>
+        <Link href="/blog" onClick={closeMenu}>
           Blog
         </Link>
-        <a href={`tel:${phoneNumber}`} className="mobile-call">
+        <a href={`tel:${phoneNumber}`} className={styles["mobile-call"]}>
           CALL NOW
         </a>
       </div>
