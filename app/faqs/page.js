@@ -1,7 +1,8 @@
+'use client'
+
 import React, { useState } from "react";
-import { Helmet } from "react-helmet";
 import GoogleMap from "../../components/GoogleMap/GoogleMap";
-import "./FAQs.css";
+import styles from "./faqs.module.css";
 
 function FAQs() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -51,8 +52,7 @@ function FAQs() {
   const phoneNumber = "07799525650";
 
   return (
-    <div className="faqs-page">
-      <Helmet>
+    <div className={styles["faqs-page"]}>
         <title>Frequently Asked Questions - Prompt Recovery</title>
         <meta
           name="description"
@@ -80,34 +80,33 @@ function FAQs() {
             }
           `}
         </script>
-      </Helmet>
 
-      <div className="faqs-container">
-        <header className="faqs-header">
+      <div className={styles["faqs-container"]}>
+        <header className={styles["faqs-header"]}>
           <h1>Frequently Asked Questions</h1>
-          <p className="faqs-intro">
+          <p className={styles["faqs-intro"]}>
             Got a question before booking? Here are answers to the most common
             things customers ask about our vehicle recovery services in Watford
             and the surrounding area.
           </p>
         </header>
 
-        <div className="faqs-accordion">
+        <div className={styles["faqs-accordion"]}>
           {faqData.map((faq, index) => (
-            <div key={index} className="faq-item">
+            <div key={index} className={styles["faq-item"]}>
               <button
-                className={`faq-question ${
-                  activeIndex === index ? "active" : ""
-                }`}
+                className={[styles["faq-question"], 
+                  activeIndex === index ? styles["active"] : ""
+                ].join(' ')}
                 onClick={() => toggleAccordion(index)}
               >
                 {faq.question}
-                <span className="faq-icon">
+                <span className={styles["faq-icon"]}>
                   {activeIndex === index ? "-" : "+"}
                 </span>
               </button>
               <div
-                className={`faq-answer ${activeIndex === index ? "open" : ""}`}
+                className={[styles["faq-answer"], activeIndex === index ? styles["open"] : ""].join(' ')}
               >
                 <p>{faq.answer}</p>
               </div>
@@ -115,21 +114,21 @@ function FAQs() {
           ))}
         </div>
 
-        <div className="faqs-cta-buttons">
+        <div className={styles["faqs-cta-buttons"]}>
           <a
             href={`tel:${phoneNumber}`}
-            className="faqs-cta-button faqs-call-button"
+            className={[styles["faqs-cta-button"], styles["faqs-call-button"]].join(' ')}
           >
             Call Now
           </a>
         </div>
 
-        <div className="faqs-map-section">
+        <div className={styles["faqs-map-section"]}>
           <h2>Find Us</h2>
           <p>We operate throughout Watford and surrounding areas.</p>
-          <GoogleMap />
         </div>
       </div>
+      <GoogleMap />
     </div>
   );
 }

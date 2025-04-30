@@ -1,5 +1,8 @@
+'use client'
+
 import React, { useState, useEffect } from "react";
-import "./ImageSlider.css";
+import Image from 'next/image';
+import styles from "./image-slider.module.css";
 
 function ImageSlider({ images }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -34,36 +37,36 @@ function ImageSlider({ images }) {
   };
 
   return (
-    <div className="slider-container">
-      <button className="slider-button prev" onClick={prevSlide}>
+    <div className={styles["slider-container"]}>
+      <button className={[styles["slider-button"], styles["prev"]].join(' ')} onClick={prevSlide}>
         &lt;
       </button>
 
-      <div className="slider-track">
+      <div className={styles["slider-track"]}>
         {images.map((image, index) => (
           <div
             key={index}
-            className="slider-slide"
+            className={styles["slider-slide"]}
             style={getSlideStyle(index)}
           >
-            <img
+            <Image
               src={image}
               alt={`Team member ${index + 1}`}
-              className="slider-image"
+              className={styles["slider-image"]}
             />
           </div>
         ))}
       </div>
 
-      <button className="slider-button next" onClick={nextSlide}>
+      <button className={[styles["slider-button"], styles["next"]].join(' ')} onClick={nextSlide}>
         &gt;
       </button>
 
-      <div className="slider-dots">
+      <div className={styles["slider-dots"]}>
         {images.map((_, index) => (
           <span
             key={index}
-            className={`slider-dot ${index === currentIndex ? "active" : ""}`}
+            className={[styles["slider-dot"], index === currentIndex ? styles["active"] : ""]}
             onClick={() => setCurrentIndex(index)}
           />
         ))}

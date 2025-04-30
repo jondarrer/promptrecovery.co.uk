@@ -1,59 +1,56 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+import Image from "next/image";
 import logo from "../../assets/images/logo.png";
-import "./Footer.css";
+import styles from "./footer.module.css";
 
 function Footer() {
   const phoneNumber = "07799525650";
   const email = "nick@promtrecovery.co.uk";
 
-  const handleCallNow = () => {
-    window.location.href = `tel:${phoneNumber}`;
-  };
-
   return (
-    <footer className="site-footer">
-      <div className="footer-content">
-        <div className="footer-logo">
-          <img src={logo} alt="Prompt Recovery" />
+    <footer className={styles["site-footer"]}>
+      <div className={styles["footer-content"]}>
+        <div className={styles["footer-logo"]}>
+          <Image src={logo} alt="Prompt Recovery" height={70} width={70} />
         </div>
-        <div className="footer-links">
+        <div className={styles["footer-links"]}>
           <h3>Quick Links</h3>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link href="/">Home</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link href="/about">About</Link>
             </li>
             <li>
-              <Link to="/services">Services</Link>
+              <Link href="/services">Services</Link>
             </li>
             <li>
-              <Link to="/faqs">FAQ's</Link>
+              <Link href="/faqs">FAQ's</Link>
             </li>
             <li>
-              <Link to="/reviews">Reviews</Link>
+              <Link href="/reviews">Reviews</Link>
             </li>
             <li>
-              <Link to="/blog">Blog</Link>
+              <Link href="/blog">Blog</Link>
             </li>
           </ul>
         </div>
-        <div className="footer-contact">
+        <div className={styles["footer-contact"]}>
           <h3>Contact Us</h3>
           <p>
             Email: <a href={`mailto:${email}`}>{email}</a>
           </p>
           <p>
             Phone:{" "}
-            <a href={`tel:${phoneNumber}`} onClick={handleCallNow}>
+            <a href={`tel:${phoneNumber}`}>
               {phoneNumber}
             </a>
           </p>
         </div>
       </div>
-      <div className="footer-bottom">
+      <div className={styles["footer-bottom"]}>
         <p>
           &copy; {new Date().getFullYear()} Prompt Recovery. All rightsreserved.
         </p>
