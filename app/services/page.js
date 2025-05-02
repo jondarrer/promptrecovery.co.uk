@@ -1,5 +1,12 @@
 import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+
 import styles from './services.module.css';
+
+export const metadata = {
+  title: 'Services | Prompt Recovery Ltd | Rapid Response, Prompt Recovery',
+};
 
 function Services() {
   const services = [
@@ -48,6 +55,9 @@ function Services() {
 
   return (
     <div className={styles['services-container']}>
+      <Head>
+        <title>Services | Prompt Recovery Ltd | Rapid Response, Prompt Recovery</title>
+      </Head>
       <div className={styles['services-content']}>
         <div className={styles['services-intro']}>
           <h1>The Services That We Offer</h1>
@@ -72,7 +82,7 @@ function Services() {
             <p>Need Help Right Now?</p>
           </div>
           <div className={styles['cta-action']}>
-            <a href="tel:07799525650">CALL NOW!</a>
+            <Link href="tel:07799525650">CALL NOW!</Link>
           </div>
         </div>
       </div>

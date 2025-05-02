@@ -86,7 +86,7 @@ function Navbar() {
         </div>
 
         <div className={styles['call-button']}>
-          <a href={`tel:${phoneNumber}`}>CALL NOW</a>
+          <Link href={`tel:${phoneNumber}`}>CALL NOW</Link>
         </div>
 
         <div
@@ -123,9 +123,9 @@ function Navbar() {
         <Link href="/blog" onClick={closeMenu}>
           Blog
         </Link>
-        <a href={`tel:${phoneNumber}`} className={styles['mobile-call']}>
+        <Link href={`tel:${phoneNumber}`} className={styles['mobile-call']}>
           CALL NOW
-        </a>
+        </Link>
       </div>
     </>
   );

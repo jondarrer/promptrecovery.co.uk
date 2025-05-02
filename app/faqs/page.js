@@ -1,16 +1,15 @@
-'use client';
+import React from 'react';
+import Link from 'next/link';
 
-import React, { useState } from 'react';
 import GoogleMap from '../../components/GoogleMap/GoogleMap';
+import Accordion from '../../components/Accordion/Accordion';
 import styles from './faqs.module.css';
 
+export const metadata = {
+  title: 'FAQs | Prompt Recovery Ltd | Rapid Response, Prompt Recovery',
+};
+
 function FAQs() {
-  const [activeIndex, setActiveIndex] = useState(null);
-
-  const toggleAccordion = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
   const faqData = [
     {
       question: 'What areas do you cover?',
@@ -52,34 +51,6 @@ function FAQs() {
 
   return (
     <div className={styles['faqs-page']}>
-      <title>Frequently Asked Questions - Prompt Recovery</title>
-      <meta
-        name="description"
-        content="Find answers to common questions about our vehicle recovery services in Watford and surrounding areas."
-      />
-      <script type="application/ld+json">
-        {`
-            {
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": [
-                ${faqData
-                  .map(
-                    (faq) => `{
-                  "@type": "Question",
-                  "name": "${faq.question}",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "${faq.answer}"
-                  }
-                }`
-                  )
-                  .join(',')}
-              ]
-            }
-          `}
-      </script>
-
       <div className={styles['faqs-container']}>
         <header className={styles['faqs-header']}>
           <h1>Frequently Asked Questions</h1>
@@ -89,27 +60,15 @@ function FAQs() {
           </p>
         </header>
 
-        <div className={styles['faqs-accordion']}>
-          {faqData.map((faq, index) => (
-            <div key={index} className={styles['faq-item']}>
-              <button
-                className={[styles['faq-question'], activeIndex === index ? styles['active'] : ''].join(' ')}
-                onClick={() => toggleAccordion(index)}
-              >
-                {faq.question}
-                <span className={styles['faq-icon']}>{activeIndex === index ? '-' : '+'}</span>
-              </button>
-              <div className={[styles['faq-answer'], activeIndex === index ? styles['open'] : ''].join(' ')}>
-                <p>{faq.answer}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+        <Accordion data={faqData} />
 
         <div className={styles['faqs-cta-buttons']}>
-          <a href={`tel:${phoneNumber}`} className={[styles['faqs-cta-button'], styles['faqs-call-button']].join(' ')}>
+          <Link
+            href={`tel:${phoneNumber}`}
+            className={[styles['faqs-cta-button'], styles['faqs-call-button']].join(' ')}
+          >
             Call Now
-          </a>
+          </Link>
         </div>
 
         <div className={styles['faqs-map-section']}>

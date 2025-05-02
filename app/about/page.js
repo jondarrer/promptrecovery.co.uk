@@ -1,8 +1,15 @@
 import React from 'react';
 import Image from 'next/image';
+import Head from 'next/head';
+import Link from 'next/link';
+
 import styles from './about.module.css';
 import GoogleMap from '../../components/GoogleMap/GoogleMap';
 import logo from '../../assets/images/recovery-truck.jpg';
+
+export const metadata = {
+  title: 'About | Prompt Recovery Ltd | Rapid Response, Prompt Recovery',
+};
 
 function About() {
   const phoneNumber = '07799525650';
@@ -85,9 +92,9 @@ function About() {
           <h2>Need help or want to know more?</h2>
           <p>Give Nick a call directly, we're always here for you</p>
         </div>
-        <button href={`tel:${phoneNumber}`} className={styles['cta-button']}>
+        <Link href={`tel:${phoneNumber}`} className={styles['cta-button']}>
           CALL NOW
-        </button>
+        </Link>
       </div>
     </div>
   );

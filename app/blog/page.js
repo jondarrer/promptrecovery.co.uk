@@ -1,9 +1,19 @@
 import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+
 import styles from './blog.module.css';
+
+export const metadata = {
+  title: 'Blog | Prompt Recovery Ltd | Rapid Response, Prompt Recovery',
+};
 
 function Blog() {
   return (
     <div className={styles['blog-page']}>
+      <Head>
+        <title>Blog | Prompt Recovery Ltd | Rapid Response, Prompt Recovery</title>
+      </Head>
       <div className={styles['blog-construction']}>
         <div className={styles['construction-icon']}>🚧</div>
         <h1>Our Blog is Coming Soon!</h1>
@@ -15,12 +25,12 @@ function Blog() {
       <div className={styles['blog-cta']}>
         <h2>Have questions in the meantime?</h2>
         <div className={styles['cta-buttons']}>
-          <a href="/faqs" className={[styles['cta-button'], styles['secondary']].join(' ')}>
+          <Link href="/faqs" className={[styles['cta-button'], styles['secondary']].join(' ')}>
             Check our FAQs
-          </a>
-          <a href="tel:1234567890" className={[styles['cta-button'], styles['primary']].join(' ')}>
+          </Link>
+          <Link href="tel:1234567890" className={[styles['cta-button'], styles['primary']].join(' ')}>
             Call Us
-          </a>
+          </Link>
         </div>
       </div>
     </div>
