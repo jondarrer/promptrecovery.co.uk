@@ -1,6 +1,13 @@
 import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+
 import styles from './reviews.module.css';
 import { FaStar, FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
+
+export const metadata = {
+  title: 'Reviews | Prompt Recovery Ltd | Rapid Response, Prompt Recovery',
+};
 
 function Reviews() {
   const reviews = [
@@ -65,6 +72,9 @@ function Reviews() {
 
   return (
     <div className={styles['reviews-page']}>
+      <Head>
+        <title>Reviews | Prompt Recovery Ltd | Rapid Response, Prompt Recovery</title>
+      </Head>
       <div className={styles['reviews-header']}>
         <h1>Customer Reviews</h1>
         <p>
@@ -97,9 +107,9 @@ function Reviews() {
 
       <div className={styles['reviews-cta']}>
         <h2>Need our services?</h2>
-        <a href="tel:1234567890" className={styles['cta-button']}>
+        <Link href="tel:1234567890" className={styles['cta-button']}>
           Call Now
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import Head from 'next/head';
 
 import styles from './page.module.css';
 import ImageSlider from '../components/ImageSlider/ImageSlider';
@@ -15,31 +14,14 @@ function Home() {
 
   return (
     <div className={styles['home-container']}>
-      <Head>
-        <title>Prompt Recovery</title>
-        <meta
-          name="description"
-          content="Find answers to common questions about our vehicle recovery services in Watford and surrounding areas."
-        />
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Home",
-              "mainEntity": [
-              ]
-            }
-          `}
-        </script>
-      </Head>
       <section className={[styles['section'], styles['hero-section']].join(' ')}>
         <div className={styles['hero-content']}>
           <h1>ROADSIDE RECOVERY YOU CAN RELY ON</h1>
           <h2>SERVING WATFORD & SOURROUNDING AREAS </h2>
           <p>Fast, friendly and affordable help for vehicles under 4 tonnes</p>
-          <a href={`tel:${phoneNumber}`} className={styles['call-now-btn']}>
+          <Link href={`tel:${phoneNumber}`} className={styles['call-now-btn']}>
             CALL NOW
-          </a>
+          </Link>
         </div>
       </section>
 
