@@ -57,7 +57,7 @@ function Navbar() {
 
   return (
     <>
-      <div className={[styles["navbar"],  false ? styles["shrink"] : ""].join(' ')}>
+      <div className={[styles["navbar"],  isShrunk ? styles["shrink"] : ""].join(' ')}>
         <div className={styles["logo"]}>
           <Link href="/">
             <Image src={logo} alt="Logo" className={styles["logo-image"]} />
@@ -102,7 +102,7 @@ function Navbar() {
 
       <div
         className={[styles["mobile-menu"], isMenuOpen ? styles["show"] : ""].join(' ')}
-        style={{ top: false ? "80px" : "120px" }}
+        style={{ top: isShrunk ? "80px" : "120px" }}
         ref={menuRef}
       >
         <Link className={styles["home-link"]} href="/" onClick={closeMenu}>
