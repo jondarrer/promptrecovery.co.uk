@@ -1,20 +1,20 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import logo from "../../assets/images/logo.png";
-import styles from "./footer.module.css";
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import logo from '../../assets/images/logo.png';
+import styles from './footer.module.css';
 
 function Footer() {
-  const phoneNumber = "07799525650";
-  const email = "nick@promtrecovery.co.uk";
+  const phoneNumber = '07799525650';
+  const email = 'nick@promtrecovery.co.uk';
 
   return (
-    <footer className={styles["site-footer"]}>
-      <div className={styles["footer-content"]}>
-        <div className={styles["footer-logo"]}>
+    <footer className={styles['site-footer']}>
+      <div className={styles['footer-content']}>
+        <div className={styles['footer-logo']}>
           <Image src={logo} alt="Prompt Recovery" height={70} width={70} />
         </div>
-        <div className={styles["footer-links"]}>
+        <div className={styles['footer-links']}>
           <h3>Quick Links</h3>
           <ul>
             <li>
@@ -37,23 +37,18 @@ function Footer() {
             </li>
           </ul>
         </div>
-        <div className={styles["footer-contact"]}>
+        <div className={styles['footer-contact']}>
           <h3>Contact Us</h3>
           <p>
             Email: <a href={`mailto:${email}`}>{email}</a>
           </p>
           <p>
-            Phone:{" "}
-            <a href={`tel:${phoneNumber}`}>
-              {phoneNumber}
-            </a>
+            Phone: <a href={`tel:${phoneNumber}`}>{phoneNumber}</a>
           </p>
         </div>
       </div>
-      <div className={styles["footer-bottom"]}>
-        <p>
-          &copy; {new Date().getFullYear()} Prompt Recovery. All rightsreserved.
-        </p>
+      <div className={styles['footer-bottom']}>
+        <p>&copy; {new Date().getFullYear()} Prompt Recovery. All rightsreserved.</p>
       </div>
     </footer>
   );

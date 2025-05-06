@@ -1,5 +1,5 @@
-import React from "react";
-import "./GoogleMap.css";
+import React from 'react';
+import './GoogleMap.css';
 
 function GoogleMap() {
   return (
