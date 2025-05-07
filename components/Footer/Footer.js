@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '../../assets/images/logo.png';
+import logo from '../../assets/images/logo-128x128.png';
 import styles from './footer.module.css';
 
 function Footer() {
