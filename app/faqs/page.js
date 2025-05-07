@@ -7,6 +7,7 @@ import styles from './faqs.module.css';
 
 export const metadata = {
   title: 'FAQs | Prompt Recovery Ltd | Rapid Response, Prompt Recovery',
+  alternates: { canonical: 'https://promptrecovery.co.uk/faqs' },
 };
 
 function FAQs() {

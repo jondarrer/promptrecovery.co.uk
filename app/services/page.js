@@ -6,6 +6,7 @@ import styles from './services.module.css';
 
 export const metadata = {
   title: 'Services | Prompt Recovery Ltd | Rapid Response, Prompt Recovery',
+  alternates: { canonical: 'https://promptrecovery.co.uk/services' },
 };
 
 function Services() {

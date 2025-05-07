@@ -7,6 +7,7 @@ import { FaStar, FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
 
 export const metadata = {
   title: 'Reviews | Prompt Recovery Ltd | Rapid Response, Prompt Recovery',
+  alternates: { canonical: 'https://promptrecovery.co.uk/reviews' },
 };
 
 function Reviews() {

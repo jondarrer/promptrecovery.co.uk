@@ -1,4 +1,4 @@
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { Metadata, Viewport } from 'next';
 
 import Navbar from '../components/Navigation/Navbar';
@@ -11,7 +11,8 @@ import './global.css';
  * @type {Metadata}
  */
 export const metadata = {
-  'char-set': 'utf-8',
+  charset: 'utf-8',
+  alternates: { canonical: 'https://promptrecovery.co.uk' },
   openGraph: {
     type: 'website',
     url: 'https://promptrecovery.co.uk',
@@ -29,7 +30,7 @@ export const metadata = {
     images: ['https://promptrecovery.co.uk/assets/images/image2.jpg'],
   },
   formatDetection: { telephone: true },
-  icons: 'https://promptrecovery.co.uk/assets/images/logo.png',
+  icons: 'https://promptrecovery.co.uk/assets/images/logo-128x128.png',
   title: 'Prompt Recovery Ltd | Rapid Response, Prompt Recovery',
   description:
     'ROADSIDE RECOVERY YOU CAN RELY ON. SERVING WATFORD & SURROUNDING AREAS. Fast, friendly and affordable help for vehicles under 4 tonnes.',

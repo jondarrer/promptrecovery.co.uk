@@ -6,6 +6,7 @@ import styles from './blog.module.css';
 
 export const metadata = {
   title: 'Blog | Prompt Recovery Ltd | Rapid Response, Prompt Recovery',
+  alternates: { canonical: 'https://promptrecovery.co.uk/blog' },
 };
 
 function Blog() {

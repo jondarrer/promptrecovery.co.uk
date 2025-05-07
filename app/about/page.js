@@ -9,6 +9,7 @@ import logo from '../../assets/images/recovery-truck.jpg';
 
 export const metadata = {
   title: 'About | Prompt Recovery Ltd | Rapid Response, Prompt Recovery',
+  alternates: { canonical: 'https://promptrecovery.co.uk/about' },
 };
 
 function About() {
