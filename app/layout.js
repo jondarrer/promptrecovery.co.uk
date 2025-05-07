@@ -1,7 +1,9 @@
+import { GoogleAnalytics } from '@next/third-parties/google'
+import { Metadata, Viewport } from 'next';
+
 import Navbar from '../components/Navigation/Navbar';
 import Footer from '../components/Footer/Footer';
 import reportWebVitals from './reportWebVitals';
-import { Metadata, Viewport } from 'next';
 
 import './global.css';
 
@@ -56,6 +58,10 @@ export default function RootLayout({ children }) {
           <Footer />
         </div>
       </body>
+      {/* Using next/script for GA may impact page performance. Instead it is
+          recommended to use GoogleAnalytics from @next/third-parties/google as
+          per https://nextjs.org/docs/messages/next-script-for-ga */}
+      <GoogleAnalytics gaId="G-CQ8R13D8MN" />
     </html>
   );
 }
