@@ -1,13 +1,26 @@
 import React from 'react';
+import { Metadata } from 'next';
 import Link from 'next/link';
 
 import GoogleMap from '../../components/GoogleMap/GoogleMap';
 import Accordion from '../../components/Accordion/Accordion';
 import styles from './faqs.module.css';
 
+/**
+ * @type {Metadata}
+ */
 export const metadata = {
   title: 'FAQs | Prompt Recovery Ltd | Rapid Response, Prompt Recovery',
   alternates: { canonical: 'https://promptrecovery.co.uk/faqs' },
+  openGraph: {
+    type: 'website',
+    url: 'https://promptrecovery.co.uk/faqs',
+    title: 'FAQs | Prompt Recovery',
+    description:
+      'Got a question before booking? Here are answers to the most common things customers ask about our vehicle recovery services in Watford and the surrounding area.',
+    siteName: 'Prompt Recovery',
+    images: [{ url: 'https://promptrecovery.co.uk/assets/images/image3.jpg' }],
+  },
 };
 
 function FAQs() {

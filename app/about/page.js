@@ -1,15 +1,26 @@
 import React from 'react';
+import { Metadata } from 'next';
 import Image from 'next/image';
-import Head from 'next/head';
 import Link from 'next/link';
 
 import styles from './about.module.css';
 import GoogleMap from '../../components/GoogleMap/GoogleMap';
 import logo from '../../assets/images/recovery-truck.jpg';
 
+/**
+ * @type {Metadata}
+ */
 export const metadata = {
   title: 'About | Prompt Recovery Ltd | Rapid Response, Prompt Recovery',
   alternates: { canonical: 'https://promptrecovery.co.uk/about' },
+  openGraph: {
+    type: 'website',
+    url: 'https://promptrecovery.co.uk/about',
+    title: 'About | Prompt Recovery',
+    description: "Hi, I'm Nick - Founder of Prompt Recovery",
+    siteName: 'Prompt Recovery',
+    images: [{ url: 'https://promptrecovery.co.uk/assets/images/image2.jpg' }],
+  },
 };
 
 function About() {

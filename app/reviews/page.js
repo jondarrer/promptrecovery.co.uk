@@ -1,13 +1,26 @@
 import React from 'react';
+import { Metadata } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 
 import styles from './reviews.module.css';
 import { FaStar, FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
 
+/**
+ * @type {Metadata}
+ */
 export const metadata = {
   title: 'Reviews | Prompt Recovery Ltd | Rapid Response, Prompt Recovery',
   alternates: { canonical: 'https://promptrecovery.co.uk/reviews' },
+  openGraph: {
+    type: 'website',
+    url: 'https://promptrecovery.co.uk/reviews',
+    title: 'Reviews | Prompt Recovery',
+    description:
+      "Don't just take our word for it. Here's what our customers have to say about our vehicle recovery services.",
+    siteName: 'Prompt Recovery',
+    images: [{ url: 'https://promptrecovery.co.uk/assets/images/image3.jpg' }],
+  },
 };
 
 function Reviews() {

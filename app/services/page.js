@@ -1,12 +1,25 @@
 import React from 'react';
+import { Metadata } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 
 import styles from './services.module.css';
 
+/**
+ * @type {Metadata}
+ */
 export const metadata = {
   title: 'Services | Prompt Recovery Ltd | Rapid Response, Prompt Recovery',
   alternates: { canonical: 'https://promptrecovery.co.uk/services' },
+  openGraph: {
+    type: 'website',
+    url: 'https://promptrecovery.co.uk/services',
+    title: 'Services | Prompt Recovery',
+    description:
+      "We provide safe, fast, and affordable towing for cars and vans that can't be driven — whether you're at home, at work, or stuck after a breakdown.",
+    siteName: 'Prompt Recovery',
+    images: [{ url: 'https://promptrecovery.co.uk/assets/images/image1.jpg' }],
+  },
 };
 
 function Services() {

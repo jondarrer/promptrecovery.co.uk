@@ -1,12 +1,24 @@
 import React from 'react';
+import { Metadata } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 
 import styles from './blog.module.css';
 
+/**
+ * @type {Metadata}
+ */
 export const metadata = {
   title: 'Blog | Prompt Recovery Ltd | Rapid Response, Prompt Recovery',
   alternates: { canonical: 'https://promptrecovery.co.uk/blog' },
+  openGraph: {
+    type: 'website',
+    url: 'https://promptrecovery.co.uk/blog',
+    title: 'Blog | Prompt Recovery',
+    description: 'Our Blog is Coming Soon!',
+    siteName: 'Prompt Recovery',
+    images: [{ url: 'https://promptrecovery.co.uk/assets/images/image1.jpg' }],
+  },
 };
 
 function Blog() {
