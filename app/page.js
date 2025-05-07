@@ -1,11 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import styles from './page.module.css';
 import ImageSlider from '../components/ImageSlider/ImageSlider';
-import image1 from '../assets/images/image1.jpg';
-import image2 from '../assets/images/image2.jpg';
-import image3 from '../assets/images/image3.jpg';
+import image1 from '../assets/images/image1-739x370.jpg';
+import image2 from '../assets/images/image2-1185x593.jpg';
+import image3 from '../assets/images/image3-1600x739.jpg';
 
 function Home() {
   const phoneNumber = '07799525650';
