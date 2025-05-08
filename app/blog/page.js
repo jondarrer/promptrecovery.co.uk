@@ -17,7 +17,6 @@ export const metadata = {
     title: 'Blog | Prompt Recovery',
     description: 'Our Blog is Coming Soon!',
     siteName: 'Prompt Recovery',
-    images: [{ url: 'https://promptrecovery.co.uk/assets/images/image1.jpg' }],
   },
 };
 

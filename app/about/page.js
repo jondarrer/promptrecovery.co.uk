@@ -19,7 +19,6 @@ export const metadata = {
     title: 'About | Prompt Recovery',
     description: "Hi, I'm Nick - Founder of Prompt Recovery",
     siteName: 'Prompt Recovery',
-    images: [{ url: 'https://promptrecovery.co.uk/assets/images/image2.jpg' }],
   },
 };
 

@@ -20,14 +20,12 @@ export const metadata = {
     description:
       'ROADSIDE RECOVERY YOU CAN RELY ON. SERVING WATFORD & SURROUNDING AREAS. Fast, friendly and affordable help for vehicles under 4 tonnes.',
     siteName: 'Prompt Recovery',
-    images: [{ url: 'https://promptrecovery.co.uk/assets/images/image2.jpg' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Prompt Recovery',
     description:
       'ROADSIDE RECOVERY YOU CAN RELY ON. SERVING WATFORD & SURROUNDING AREAS. Fast, friendly and affordable help for vehicles under 4 tonnes.',
-    images: ['https://promptrecovery.co.uk/assets/images/image2.jpg'],
   },
   formatDetection: { telephone: true },
   icons: 'https://promptrecovery.co.uk/assets/images/logo-128x128.png',

@@ -19,7 +19,6 @@ export const metadata = {
     description:
       "Don't just take our word for it. Here's what our customers have to say about our vehicle recovery services.",
     siteName: 'Prompt Recovery',
-    images: [{ url: 'https://promptrecovery.co.uk/assets/images/image3.jpg' }],
   },
 };
 
