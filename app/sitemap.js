@@ -1,5 +1,8 @@
 import { MetadataRoute } from 'next';
 
+// https://github.com/vercel/next.js/issues/68667
+export const dynamic = 'force-static';
+
 /**
  *
  * @returns {MetadataRoute.Sitemap}
