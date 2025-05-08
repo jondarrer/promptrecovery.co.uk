@@ -17,6 +17,15 @@ export const metadata = {
     title: 'Blog | Prompt Recovery',
     description: 'Our Blog is Coming Soon!',
     siteName: 'Prompt Recovery',
+    images: [
+      {
+        url: 'https://promptrecovery.co.uk/images/image2-1185x593.jpg',
+        width: 1185,
+        height: 593,
+        type: 'image/jpeg',
+        alt: 'Nick, Founder of Prompt Recovery',
+      },
+    ],
   },
 };
 

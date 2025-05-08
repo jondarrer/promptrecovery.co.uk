@@ -19,6 +19,15 @@ export const metadata = {
     description:
       "Don't just take our word for it. Here's what our customers have to say about our vehicle recovery services.",
     siteName: 'Prompt Recovery',
+    images: [
+      {
+        url: 'https://promptrecovery.co.uk/images/image2-1185x593.jpg',
+        width: 1185,
+        height: 593,
+        type: 'image/jpeg',
+        alt: 'Nick, Founder of Prompt Recovery',
+      },
+    ],
   },
 };
 

@@ -18,6 +18,15 @@ export const metadata = {
     description:
       "We provide safe, fast, and affordable towing for cars and vans that can't be driven — whether you're at home, at work, or stuck after a breakdown.",
     siteName: 'Prompt Recovery',
+    images: [
+      {
+        url: 'https://promptrecovery.co.uk/images/image2-1185x593.jpg',
+        width: 1185,
+        height: 593,
+        type: 'image/jpeg',
+        alt: 'Nick, Founder of Prompt Recovery',
+      },
+    ],
   },
 };
 

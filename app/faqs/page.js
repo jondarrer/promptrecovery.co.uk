@@ -19,6 +19,15 @@ export const metadata = {
     description:
       'Got a question before booking? Here are answers to the most common things customers ask about our vehicle recovery services in Watford and the surrounding area.',
     siteName: 'Prompt Recovery',
+    images: [
+      {
+        url: 'https://promptrecovery.co.uk/images/image2-1185x593.jpg',
+        width: 1185,
+        height: 593,
+        type: 'image/jpeg',
+        alt: 'Nick, Founder of Prompt Recovery',
+      },
+    ],
   },
 };
 
