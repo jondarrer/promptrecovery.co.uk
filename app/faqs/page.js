@@ -11,6 +11,8 @@ import styles from './faqs.module.css';
  */
 export const metadata = {
   title: 'FAQs | Prompt Recovery Ltd | Rapid Response, Prompt Recovery',
+  description:
+    'Got a question before booking? Here are answers to the most common things customers ask about our vehicle recovery services in Watford and the surrounding area.',
   alternates: { canonical: 'https://promptrecovery.co.uk/faqs' },
   openGraph: {
     type: 'website',

@@ -10,6 +10,8 @@ import styles from './services.module.css';
  */
 export const metadata = {
   title: 'Services | Prompt Recovery Ltd | Rapid Response, Prompt Recovery',
+  description:
+    "We provide safe, fast, and affordable towing for cars and vans that can't be driven — whether you're at home, at work, or stuck after a breakdown.",
   alternates: { canonical: 'https://promptrecovery.co.uk/services' },
   openGraph: {
     type: 'website',
@@ -93,7 +95,7 @@ function Services() {
           {services.map((service) => (
             <div className={styles['service-card']} key={service.id}>
               <div className={styles['service-icon']}>{service.icon}</div>
-              <h3>{service.title}</h3>
+              <h2>{service.title}</h2>
               <p>{service.description}</p>
             </div>
           ))}

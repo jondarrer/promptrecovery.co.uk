@@ -11,6 +11,8 @@ import { FaStar, FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
  */
 export const metadata = {
   title: 'Reviews | Prompt Recovery Ltd | Rapid Response, Prompt Recovery',
+  description:
+    "Don't just take our word for it. Here's what our customers have to say about our vehicle recovery services.",
   alternates: { canonical: 'https://promptrecovery.co.uk/reviews' },
   openGraph: {
     type: 'website',

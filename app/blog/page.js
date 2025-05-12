@@ -10,6 +10,7 @@ import styles from './blog.module.css';
  */
 export const metadata = {
   title: 'Blog | Prompt Recovery Ltd | Rapid Response, Prompt Recovery',
+  description: 'Our Blog is Coming Soon!',
   alternates: { canonical: 'https://promptrecovery.co.uk/blog' },
   openGraph: {
     type: 'website',

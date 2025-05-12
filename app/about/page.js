@@ -12,6 +12,7 @@ import logo from '../../assets/images/recovery-truck.jpg';
  */
 export const metadata = {
   title: 'About | Prompt Recovery Ltd | Rapid Response, Prompt Recovery',
+  description: "Hi, I'm Nick - Founder of Prompt Recovery",
   alternates: { canonical: 'https://promptrecovery.co.uk/about' },
   openGraph: {
     type: 'website',
