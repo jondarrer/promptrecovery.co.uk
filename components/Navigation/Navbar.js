@@ -60,7 +60,7 @@ function Navbar() {
       <div className={[styles['navbar'], isShrunk ? styles['shrink'] : ''].join(' ')}>
         <div className={styles['logo']}>
           <Link href="/">
-            <Image src={logo} alt="Logo" className={styles['logo-image']} />
+            <Image src={logo} alt="Prompt Recovery Logo" className={styles['logo-image']} />
           </Link>
         </div>
 
