@@ -46,6 +46,15 @@ function Footer() {
             Phone: <a href={`tel:${phoneNumber}`}>{phoneNumber}</a>
           </p>
         </div>
+        <div className={styles['footer-contact']}>
+          <h3>Social Media</h3>
+          <p>
+            X: <a href="https://x.com/prompt_recovery">prompt_recovery</a>
+          </p>
+          <p>
+            Facebook: <a href="https://faceboo.com/promptrecovery">promptrecovery</a>
+          </p>
+        </div>
       </div>
       <div className={styles['footer-bottom']}>
         <p>&copy; {new Date().getFullYear()} Prompt Recovery. All rightsreserved.</p>
