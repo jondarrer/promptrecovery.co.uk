@@ -52,7 +52,7 @@ function Footer() {
             X: <a href="https://x.com/prompt_recovery">prompt_recovery</a>
           </p>
           <p>
-            Facebook: <a href="https://faceboo.com/promptrecovery">promptrecovery</a>
+            Facebook: <a href="https://www.facebook.com/promptrecovery">promptrecovery</a>
           </p>
         </div>
       </div>
