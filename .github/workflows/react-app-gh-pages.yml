@@ -51,22 +51,6 @@ jobs:
       - name: Add CNAME file for custom domain
         run: echo "promptrecovery.co.uk" > ./build/CNAME
 
-      - name: Add 404.html redirect for React Router
-        run: |
-          cat <<EOF > ./build/404.html
-          <!DOCTYPE html>
-          <html>
-            <head>
-              <meta http-equiv="refresh" content="0; url=/" />
-              <script>
-                const pathname = window.location.pathname;
-                window.location.replace("/" + pathname + window.location.search + window.location.hash);
-              </script>
-            </head>
-            <body></body>
-          </html>
-          EOF
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
