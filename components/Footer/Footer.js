@@ -30,9 +30,6 @@ function Footer() {
               <Link href="/faqs">FAQ's</Link>
             </li>
             <li>
-              <Link href="/reviews">Reviews</Link>
-            </li>
-            <li>
               <Link href="/blog">Blog</Link>
             </li>
           </ul>

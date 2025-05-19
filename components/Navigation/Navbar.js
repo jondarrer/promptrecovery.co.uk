@@ -77,9 +77,6 @@ function Navbar() {
           <Link href="/faqs" onClick={closeMenu}>
             FAQ's
           </Link>
-          <Link href="/reviews" onClick={closeMenu}>
-            Reviews
-          </Link>
           <Link href="/blog" onClick={closeMenu}>
             Blog
           </Link>
@@ -116,9 +113,6 @@ function Navbar() {
         </Link>
         <Link href="/faqs" onClick={closeMenu}>
           FAQ's
-        </Link>
-        <Link href="/reviews" onClick={closeMenu}>
-          Reviews
         </Link>
         <Link href="/blog" onClick={closeMenu}>
           Blog

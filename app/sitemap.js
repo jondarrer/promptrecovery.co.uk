@@ -28,12 +28,6 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
-      url: 'https://promptrecovery.co.uk/reviews',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
       url: 'https://promptrecovery.co.uk/services',
       lastModified: new Date(),
       changeFrequency: 'monthly',
