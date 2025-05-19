@@ -62,7 +62,7 @@ function About() {
             </p>
           </div>
           <div className={styles['founder-image']}>
-            <Image src={logo} alt="Nick - Founder of Prompt Recovery" />
+            <Image src={logo} alt="Nick - Founder of Prompt Recovery" height={1600} width={1570} />
           </div>
         </div>
       </div>

@@ -12,7 +12,7 @@ function Footer() {
     <footer className={styles['site-footer']}>
       <div className={styles['footer-content']}>
         <div className={styles['footer-logo']}>
-          <Image src={logo} alt="Prompt Recovery" height={70} width={70} />
+          <Image src={logo} alt="Prompt Recovery" height={128} width={128} />
         </div>
         <div className={styles['footer-links']}>
           <h3>Quick Links</h3>
