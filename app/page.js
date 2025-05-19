@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 import styles from './page.module.css';
 import ImageSlider from '../components/ImageSlider/ImageSlider';
@@ -74,32 +73,6 @@ function Home() {
         </div>
         <Link href="/services" className={styles['view-all-btn']}>
           View all services
-        </Link>
-      </section>
-
-      <section className={[styles['section'], styles['testimonials-section']].join(' ')}>
-        <div className={styles['section-heading']}>
-          <h2>What our clients say</h2>
-        </div>
-        <div className={styles['testimonials-container']}>
-          <div className={styles['testimonial-card']}>
-            <div className={styles['rating']}>★★★★★</div>
-            <p className={styles['testimonial-text']}>
-              "Excellent service! They arrived within 20 minutes when my car broke down on the highway. Highly
-              recommend!"
-            </p>
-            <p className={styles['client-name']}>- Maria D.</p>
-          </div>
-          <div className={styles['testimonial-card']}>
-            <div className={styles['rating']}>★★★★☆</div>
-            <p className={styles['testimonial-text']}>
-              "Professional and friendly. Quick to respond and got me back on the road in no time."
-            </p>
-            <p className={styles['client-name']}>- Alex T.</p>
-          </div>
-        </div>
-        <Link href="/reviews" className={styles['read-more-btn']}>
-          Read more reviews
         </Link>
       </section>
 
