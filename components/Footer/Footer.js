@@ -46,10 +46,22 @@ function Footer() {
         <div className={styles['footer-contact']}>
           <h3>Social Media</h3>
           <p>
-            X: <a href="https://x.com/prompt_recovery">prompt_recovery</a>
+            X:{' '}
+            <a href="https://x.com/prompt_recovery" target="_blank">
+              prompt_recovery
+            </a>
           </p>
           <p>
-            Facebook: <a href="https://www.facebook.com/promptrecovery">promptrecovery</a>
+            Facebook:{' '}
+            <a href="https://www.facebook.com/promptrecovery" target="_blank">
+              promptrecovery
+            </a>
+          </p>
+          <p>
+            Trustpilot:{' '}
+            <a href="https://uk.trustpilot.com/review/promptrecovery.co.uk" target="_blank">
+              promptrecovery.co.uk
+            </a>
           </p>
         </div>
       </div>
